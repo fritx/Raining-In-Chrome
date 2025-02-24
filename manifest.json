@@ -1,7 +1,7 @@
 ﻿{
     "name": "It's Raining"
-    ,"version":"1.6"
-    ,"manifest_version":2
+    ,"version":"3.0"
+    ,"manifest_version":3
     ,"description":"Rain Makes Everything Better"
 
     ,"icons":{
@@ -9,16 +9,18 @@
         ,"48":"assets/48.png"
         ,"128":"assets/128.png"
     }
-    ,"browser_action": {
+    ,"action": {
         "default_icon": "assets/sun.png"
-        ,"default_title":"Raining Makes Everything Better"
+        ,"default_title":"Raining makes everything better!"
     }
     ,"permissions":[
-        "background"
+        "offscreen"
     ]
 
-    ,"options_page": "options.html"
+    ,"options_ui": {
+        "page": "options.html"
+    }
     ,"background": {
-        "page":"background.html"
+        "service_worker": "background.js"
     }
 }
